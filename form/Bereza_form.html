@@ -1,0 +1,150 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<title>Form</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		header{
+			text-align: center;
+		}
+		fieldset{
+			width: 500px;
+			margin: auto;
+		}
+		legend{
+			margin: 0px 50px;
+		}
+		li{
+			list-style-type: none;
+			margin: 15px;
+		}
+		table{
+			margin: 10px 40px;
+		}
+		td{
+			padding: 10px;
+		}
+		.button{
+			text-align: center;
+			margin: 20px;
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Форма заявки на работу в зоопарке</h1>
+		<span><em>Пожалуйста,заполните форму. Обязательные поля помечены*</em></span>
+	</header>
+	<main>
+		<form>
+			<fieldset>
+				<legend>Контактная информация</legend>
+				<ul>
+					<li>
+						<span>Имя*</span> 
+						<input type="text" name="name" required/>
+					</li>	
+					<li>
+						<span>Телефон</span> 
+						<input type="tel" name="tel" placeholder="+380 -- --- -- --"/ maxlength="11"><!--не работает maxlength-->
+					</li>
+					<li>
+						<span>Email*</span> 
+						<input type="text" name="email" required/>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Персональная информация</legend>
+				<ul>
+					<li>
+						<span>Возраст*</span>
+						<input type="number" min="18" max="65" placeholder="18" name="age" required/>
+					</li>
+					<li>
+						<span>Пол</span>
+						<select>
+							<option>Женщина</option>
+							<option>Мужчина</option>
+						</select>
+					</li>
+					<li>
+						<span>Семейное положение:</span><br/>
+						<label>
+							<span>Не замужем\не женат</span><input type="radio" name="status" checked/><br/>
+						</label>
+						<label>
+							<span>Замужем\женат</span><input type="radio" name="status"/>
+						</label>
+					</li>
+					<li>
+						<span>Перечислите ваши личные качества:</span><br/>
+						<textarea rows="6" name="about"></textarea>
+					</li>
+				</ul>	
+			</fieldset>
+			<fieldset>
+				<legend>Выбирете ваших любимых животных</legend>
+				<table>
+					<tr>
+						<td>
+							<label>
+							<input type="checkbox" name="animal"/>
+							<span>Зебра</span>
+							</label>
+						</td>
+						<td>
+							<label>
+							<input type="checkbox" name="animal"/>
+							<span>Кошка</span>
+							</label>
+						</td>
+						<td>
+							<label>
+							<input type="checkbox" name="animal"/>
+							<span>Анаконда</span>
+							</label>
+						</td>
+						<td>
+							<label>
+							<input type="checkbox" name="animal"/>
+							<span>Бегемот</span>
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>
+							<input type="checkbox" name="animal"/>
+							<span>Слон</span>
+							</label>
+						</td>
+						<td>
+							<label>
+							<input type="checkbox" name="animal"/>
+							<span>Антилопа</span>
+							</label>
+						</td>
+						<td>
+							<label>
+							<input type="checkbox" name="animal"/>
+							<span>Голубь</span>
+							</label>
+						</td>
+						<td>
+							<label>
+							<input type="checkbox" name="animal"/>
+							<span>Краб</span>
+							</label>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<div class="button">
+			<button type="submit" name="submit">Отправить информацию</button>
+			</div>
+		</form>
+	</main>
+</body>
+</html>
