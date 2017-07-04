@@ -1,0 +1,247 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+@font-face{
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face{
+	font-family: 'RobotoSlab';
+	src: url('../fonts/RobotoSlab-Regular.ttf');
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+.center{
+	margin: 0 auto;
+	height: 100%;
+	width: 75%;
+}
+
+
+#home{
+	background-image: url('../img/home-background.png');
+	background-size: 100% 100%;
+	height: 770px;
+}
+
+.navigation, .nav-items, .services-content, .about-info, .about-team, .works-content{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+h1, .nav-items li a, .home-content, .started{
+	font-family: 'Montserrat';
+	color: #fff;
+	text-transform: capitalize;
+}
+h1, .nav-items li a{
+	line-height: 90px;
+}
+h1{
+	font-size: 24px;
+
+}
+.nav-items li a{
+	font-size: 14px;
+	margin-left: 30px;
+}
+.home-content{
+	line-height: 60px;
+	text-align: center;
+	position: absolute;
+    top: 31%;
+    left: 33%;
+}
+.home-content h2{
+	font-size: 48px;
+	text-transform: uppercase;
+}
+.home-content li:nth-child(2){
+	font-family: 'RobotoSlab';
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.started{
+	background-color: transparent;
+	border: 2px solid #fff;
+	font-size: 16px;
+	padding: 15px 35px;
+	text-transform: uppercase;
+	outline: none;
+    cursor: pointer;
+}
+
+
+#services{
+	height: 580px;
+	color: #555555;
+}
+.services-header, .about-header, .works-header{
+	text-align: center;
+	line-height: 40px;
+	padding: 100px 0 70px;
+}
+.services-header li h2, .about-header li h2, .works-header li h2{
+	font-family: 'Montserrat';
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.services-header li hr, .about-header li hr, .works-header li hr{
+	width: 50px;
+	height: 2px;
+	display: inline-block;
+	background-color: #555555;
+	border: none;
+}
+.services-header li:nth-child(3), .about-header li:nth-child(3), .works-header-nav{
+	font-family: 'RobotoSlab';
+	font-size: 16px;
+}
+.services-content, .about-team{
+	text-align: center;
+}
+.fa-font, .fa-code, .fa-support{
+	border: 2px solid #ddd;
+	border-radius: 50%;
+	padding: 20px;
+}
+.fa-font{
+	color: #fff;
+	background: #c0301c;
+}
+.fa-code, .fa-support{
+	color: #c0301c;
+}
+.services-content ul li{
+	line-height: 60px;
+}
+.services-content ul  li h3, .about-team ul  li h3{
+	font-family: 'Montserrat';
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.services-content ul  li:nth-child(3), .about-info{
+	font-family: 'RobotoSlab';
+	font-size: 14px;
+	line-height: 24px;
+}
+
+
+
+#about{
+	height: 852px;
+	background-color: #f8f8f8;
+	color: #555555;
+}
+.about-info li{
+	width: 49%;
+	line-height: 24px;
+	padding-bottom: 70px;
+}
+.about-team ul  li:nth-child(3){
+	font-family: 'RobotoSlab';
+	font-size: 13px;
+}
+.about-team{
+	line-height: 24px;
+}
+.img-about, .img-works-wrap{
+	position: relative;
+}
+.img-layer-about, .img-works-layer{
+	position: absolute;
+	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	visibility: hidden;
+  	opacity: 0;
+  	transition: opacity .2s, visibility .2s;
+}
+.img-layer-about{
+	background: rgba(85, 85, 85, 0.6);
+	height: 98%;
+}
+.img-layer-about a{
+	color: #fff;
+	line-height: 420px;
+	padding: 5px 5px;
+
+}
+.img-layer-about a i{
+	padding: 0 3px;
+}
+.img-about:hover .img-layer-about,.img-works-wrap:hover .img-works-layer{
+	visibility: visible;
+  	opacity: 1;
+}
+.img-layer-about a:hover{
+	background-color: #c0301c;
+
+}
+
+#works, .works-header-nav li a{	
+	color: #555555;
+}
+.works-content{
+	flex-wrap: wrap;
+}
+.works-header-nav li{
+	display: inline-block;
+	padding-right: 2%;
+}
+.works-header-nav li a:hover{
+	color: #c0301c;
+}
+.img-works-wrap{
+	margin-bottom: 30px;
+}
+.img-works-wrap img{
+	height: 100%;
+	width: 100%;
+}
+.img-works-layer{
+	background-color: rgba(192, 48, 28, 0.6);
+	color: #fff;
+	text-align: center;
+}
+.img-works-layer::before{
+  	content: '';
+  	display: inline-block;
+  	height: 100%;
+  	vertical-align: middle;
+}
+.img-works-layer ul{
+	display: inline-block;
+    vertical-align: middle;
+}
+.img-works-layer ul li{
+	padding-bottom: 20px;
+	text-align: center;
+}
+.img-works-layer ul li:first-child{
+	font-family: 'Montserrat';
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.img-works-layer ul li:nth-child(2){
+	font-family: 'RobotoSlab';
+	font-size: 12px;
+}
+.img-works-layer ul li button{
+	background-color: #fff;
+	color: #c0301c;
+	font-family: 'RobotoSlab';
+	font-size: 14px;
+	padding: 10px 30px;
+	border: none;
+	text-transform: uppercase;
+	outline: none;
+    cursor: pointer;
+}
